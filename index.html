@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Resume</title>
+</head>
+<body>
+    <div class="container">
+        <div class="head">
+            <div class="wrap">
+                <p class="name">赵梓峻<span> /Zijun Zhao</span></p>
+                <p class="job">求职意向：Web前端</p>
+                <p class="tag">
+                    <span>211本科</span>
+                    <span>软件工程</span>
+                    <span>Vue</span>
+                </p>
+            </div>
+        </div>
+        <div class="main">
+            <div class="left">
+                <p class="title">工作经历</p>
+                <div>
+                    <p class="sub-title">福州网翔网络<span>2021.07 ~ 至今</span></p>
+                    <p>任职：Web前端</p>
+                    <p>主要职责：销售站日常bug的发现与解决、新站点设计稿还原，与后端协作实现相应业务逻辑、数据交互等</p>
+                    <p>项目经历：</p>
+                    <div style="margin-left: .2rem; margin-top: .1rem;">
+                        <p class="sub-title">ideaplus<span><a href="https://ideaplus.com/">https://ideaplus.com/</a></span></p>
+                        <div class="content"><label>主要职责：</label><p>使用Vue还原官网首页、ElementUI还原前台首页、订单列表页、商品详情页的设计稿，axios与后端协作实现页面数据交互，优化http请求数量等。</p></div>
+                    </div>
+                    <div style="margin-left: .2rem; margin-top: .1rem;">
+                        <p class="sub-title">财务管理系统</p>
+                        <div class="content"><label>主要职责：</label><p>使用Vue、ElementUI封装部分基础组件，实现交互效果，bug溯源与修复等，辅助主要人员进行开发。</p></div>
+                    </div>
+                    <div style="margin-left: .2rem; margin-top: .1rem;">
+                        <p class="sub-title">doldols前台<span><a href="https://www.doldols.com/">https://www.doldols.com/</a></span></p>
+                        <div class="content"><label>主要职责：</label><p>使用jQuery还原商品页、购物车页面、结算页面设计稿，使用ajax与后端联调实现数据交互，优化http请求数量等。</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="right"></div>
+        </div>
+    </div>
+
+    <script>
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                if(clientWidth>=640){
+                    docEl.style.fontSize = '100px';
+                }else{
+                    docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+                }
+            };
+
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+    </script>
+</body>
+</html>
