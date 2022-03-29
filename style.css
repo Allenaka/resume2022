@@ -11,7 +11,7 @@
     height: calc(100vw / .7);
     width: 100vw;
     margin: 0 auto;
-    padding: .3rem 0;
+    padding: .5rem 0 .3rem;
     background-color: #f1f1f1;
     font-size: .14rem;
     font-family: '微软雅黑', sans-serif;
@@ -52,19 +52,17 @@
 .main .left {
     flex: 2;
     border-right: 1px solid;
-    padding: 0 .1rem 0 .4rem;
-    /* background-color: green; */
+    padding: 0 .2rem 0 .4rem;
 }
 .main .right {
     flex: 1;
     padding: 0 .2rem;
-    /* background-color: red; */
 }
 .main .title {
     font-size: .18rem;
     font-weight: 700;
     font-family: '黑体';
-    margin-bottom: .1rem;
+    line-height: .6rem;
 }
 .main .sub-title {
     font-family: '黑体';
@@ -89,9 +87,27 @@
 }
 .main .content {
     display: flex;
+    margin-bottom: .2rem;
+}
+.skill .content p, .skill .content label {
+    line-height: .35rem;
 }
 .main .content label {
     flex-shrink: 0;
+}
+.main .content label.sub-title::before {
+    top: .12rem
+}
+.work p {
+    margin-bottom: .1rem;
+}
+.title:not(:first-of-type)::before {
+    display: block;
+    content: '';
+    height: 2px;
+    width: 100%;
+    background:linear-gradient(to right, #ccc, #ccc 16px,transparent 16px, transparent);
+    background-size: 32px 100%;
 }
 @media screen and (min-width: 991px) {
     .container {
