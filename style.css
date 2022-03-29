@@ -39,8 +39,8 @@
 }
 .head .tag span {
     background-color: #ffda75;
-    border: 1px solid #000;
-    border-radius: 20px;
+    border: 0.01rem solid #000;
+    border-radius: .2rem;
     padding: 0 .05rem;
     margin-right: .1rem;
 }
@@ -100,13 +100,16 @@
 .work p {
     margin-bottom: .1rem;
 }
-.title:not(:first-of-type)::before {
+/* .title:not(:first-of-type)::before {
     display: block;
     content: '';
     height: .01rem;
     width: 100%;
     background:linear-gradient(to right, #000, #000 .16rem, transparent .16rem, transparent);
     background-size: .32rem 100%;
+} */
+.title:not(:first-of-type) {
+    border-top: .01rem solid #000;
 }
 .info, .education, .other, .evaluation {
     margin-bottom: .5rem;
@@ -160,6 +163,9 @@
     position: absolute;
     top: 0;
     visibility: hidden;
+}
+.qrcode img {
+    width: 3rem;
 }
 .qrcode a {
     display: block;

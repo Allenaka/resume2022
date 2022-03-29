@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css?v=2022032904">
-    <title>Resume</title>
+    <link rel="stylesheet" href="./style.css?v=2022032905">
+    <title>Resume2022</title>
 </head>
 <body>
     <div class="container">
@@ -123,7 +123,7 @@
                         </li>
                     </ul>
                     <div class="qrcode">
-                        <img src="./wechat.png" alt="" width="300px">
+                        <img src="./wechat.png" alt="">
                         <a id="close"></a>
                     </div>
                 </div>
@@ -138,7 +138,6 @@
             resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
             recalc = function () {
                 var clientWidth = docEl.clientWidth;
-                if (!clientWidth) return;
                 if(clientWidth>=991){
                     docEl.style.fontSize = '100px';
                 }else{
@@ -156,7 +155,7 @@
             let contentWidth = html.clientWidth // 获得该容器的宽
             let contentHeight = html.clientHeight // 获得该容器的高
             let canvas = document.createElement('canvas')
-            let scale = 2  // 解决清晰度问题，先放大 2倍
+            let scale = window.devicePixelRatio*2  // 解决清晰度问题，先放大 2倍
 
             canvas.width = contentWidth * scale // 将画布宽&&高放大两倍
             canvas.height = contentHeight * scale
