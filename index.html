@@ -4,7 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css?v=2022032905">
+    <link rel="stylesheet" href="./style.css?v=2022033101">
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if(clientWidth>=992){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth / 992) + 'px';
+                    }
+                };
+    
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
     <title>Resume2022</title>
 </head>
 <body>
@@ -29,7 +47,7 @@
                     <p>主要职责：销售站日常bug的发现与解决、新站点设计稿还原，与后端协作实现相应业务逻辑、数据交互等</p>
                     <p>项目经历：</p>
                     <div style="margin-left: .2rem; margin-top: .1rem;">
-                        <p class="sub-title">ideaplus<span><a href="https://ideaplus.com/">https://ideaplus.com/</a></span></p>
+                        <p class="sub-title">ideaplus<span><a href="https://ideaplus.com/" target="blank">https://ideaplus.com/</a></span></p>
                         <div class="content"><label>主要职责：</label><p>使用Vue还原官网首页、ElementUI还原前台首页、订单列表页、商品详情页的设计稿，axios与后端协作实现页面数据交互，优化http请求数量等。</p></div>
                     </div>
                     <div style="margin-left: .2rem; margin-top: .1rem;">
@@ -37,26 +55,26 @@
                         <div class="content"><label>主要职责：</label><p>使用Vue、ElementUI封装部分基础组件，实现交互效果，bug溯源与修复等，辅助主要人员进行开发。</p></div>
                     </div>
                     <div style="margin-left: .2rem; margin-top: .1rem;">
-                        <p class="sub-title">doldols前台<span><a href="https://www.doldols.com/">https://www.doldols.com/</a></span></p>
+                        <p class="sub-title">doldols前台<span><a href="https://www.doldols.com/" target="blank">https://www.doldols.com/</a></span></p>
                         <div class="content"><label>主要职责：</label><p>使用jQuery还原商品页、购物车页面、结算页面设计稿，使用ajax与后端联调实现数据交互，优化http请求数量等。</p></div>
                     </div>
                 </div>
                 <p class="title">个人实践</p>
                 <div style="margin-bottom: .2rem;">
-                    <p class="sub-title">个人博客后台管理系统<span></span></p>
+                    <p class="sub-title">个人博客后台管理系统<span><a href="https://github.com/Allenaka/vue-manager" target="blank">https://github.com/Allenaka/vue-manager/</a></span></p>
                     <p style="text-indent: 2em;">使用Vue全家桶+ElementUI实现的spa应用，express搭建服务端，axios进行数据交互，echarts实现简单数据可视化，实现对发布文章等的增删改查。</p>
                 </div>
                 <div style="margin-bottom: .2rem;">
-                    <p class="sub-title">图片编辑器<span></span></p>
+                    <p class="sub-title">图片编辑器<span><a href="https://allenaka.github.io/canvasEditor/" target="blank">https://allenaka.github.io/canvasEditor/</a></span></p>
                     <p style="text-indent: 2em;">使用jQuety、Bootstrap搭建前端页面，使用Fabric操作画布，实现图片的缩放、旋转、插入图片、文本、下载等操作。</p>
                 </div>
                 <div style="margin-bottom: .2rem;">
-                    <p class="sub-title">天气查询<span></span></p>
+                    <p class="sub-title">天气查询<span><a href="https://allenaka.github.io/WeatherSearch/" target="blank">https://allenaka.github.io/WeatherSearch/</a></span></p>
                     <p style="text-indent: 2em;">查看国内的各省市的实时天气，实现天气数据可视化，让用户清楚了解 到全国各部的天气情况，以及各省市的未来的天气预测。为需要的用户提供 实时气象数据。</p>
                     <p style="text-indent: 2em;">使用jQuety、echarts实现天气数据可视化，调用第三方接口获取各省市天气数据。</p>
                 </div>
                 <div style="margin-bottom: .2rem;">
-                    <p class="sub-title">门户网站仿写<span></span></p>
+                    <p class="sub-title">门户网站仿写<span><a href="https://allenaka.github.io/SZNSFirstPage/" target="blank">https://allenaka.github.io/SZNSFirstPage/</a></span></p>
                     <p style="text-indent: 2em;">仿写网站首页响应式布局，使用 flex 布局、css3 媒体查询实现响应式。</p>
                 </div>
                 <p class="title">技术栈</p>
@@ -132,24 +150,6 @@
     </div>
     <script src="./jsPDF.js"></script>
     <script src="./html2canvas.js"></script>
-    <script>
-    (function (doc, win) {
-        var docEl = doc.documentElement,
-            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
-            recalc = function () {
-                var clientWidth = docEl.clientWidth;
-                if(clientWidth>=991){
-                    docEl.style.fontSize = '100px';
-                }else{
-                    docEl.style.fontSize = 100 * (clientWidth / 991) + 'px';
-                }
-            };
-
-        if (!doc.addEventListener) return;
-        win.addEventListener(resizeEvt, recalc, false);
-        doc.addEventListener('DOMContentLoaded', recalc, false);
-    })(document, window);
-    </script>
     <script>
         let html2pdf = html => {
             let contentWidth = html.clientWidth // 获得该容器的宽

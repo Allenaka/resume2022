@@ -50,7 +50,7 @@
 }
 .main .left {
     flex: 2;
-    border-right: 1px solid;
+    border-right: .02rem solid;
     padding: 0 .2rem 0 .4rem;
 }
 .main .right {
@@ -109,7 +109,7 @@
     background-size: .32rem 100%;
 } */
 .title:not(:first-of-type) {
-    border-top: .01rem solid #000;
+    border-top: .02rem solid #000;
 }
 .info, .education, .other, .evaluation {
     margin-bottom: .5rem;
