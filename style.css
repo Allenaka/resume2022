@@ -86,16 +86,16 @@
 }
 .main .content {
     display: flex;
-    margin-bottom: .2rem;
+    margin-bottom: .1rem;
 }
-.skill .content p, .skill .content label {
-    line-height: .35rem;
+.skill .content label {
+    /* line-height: .35rem; */
 }
 .main .content label {
     flex-shrink: 0;
 }
 .main .content label.sub-title::before {
-    top: .12rem
+    top: 0
 }
 .work p {
     margin-bottom: .1rem;
